@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Калькулятор палива</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <h1>Калькулятор палива</h1>
+
+    <label for="taskSelector">Оберіть завдання:</label>
+    <select id="taskSelector" class="selector">
+        <option value="1">Завдання 1 — Склад палива</option>
+        <option value="2">Завдання 2 — Мазут</option>
+    </select>
+
+    <form id="fuelForm">
+        <div id="task1Inputs" class="task-section">
+            <label>Водень (H<sup>p</sup>), %: <input type="number" name="HP" step="0.01"></label>
+            <label>Вуглець (C<sup>p</sup>), %: <input type="number" name="CP" step="0.01"></label>
+            <label>Сірка (S<sup>p</sup>), %: <input type="number" name="SP" step="0.01"></label>
+            <label>Азот (N<sup>p</sup>), %: <input type="number" name="NP" step="0.01"></label>
+            <label>Кисень (O<sup>p</sup>), %: <input type="number" name="OP" step="0.01"></label>
+            <label>Волога (W<sup>p</sup>), %: <input type="number" name="WP" step="0.01"></label>
+            <label>Зола (A<sup>p</sup>), %: <input type="number" name="AP" step="0.01"></label>
+        </div>
+
+        <div id="task2Inputs" class="task-section" style="display: none;">
+            <label>Вуглець (C<sup>г</sup>), %: <input type="number" name="CG" step="0.01"></label>
+            <label>Водень (H<sup>г</sup>), %: <input type="number" name="HG" step="0.01"></label>
+            <label>Кисень (O<sup>г</sup>), %: <input type="number" name="OG" step="0.01"></label>
+            <label>Сірка (S<sup>г</sup>), %: <input type="number" name="SG" step="0.01"></label>
+            <label>Нижча теплота згоряння горючої маси (Q<sub>н</sub><sup>r</sup>), МДж/кг:
+                <input type="number" name="Qdaf" step="0.01">
+            </label>
+            <label>Волога (W<sup>p</sup>), %: <input type="number" name="WP2" step="0.01"></label>
+            <label>Зола (A<sup>d</sup>), %: <input type="number" name="Ad" step="0.01"></label>
+            <label>Ванадій (V), мг/кг: <input type="number" name="V" step="0.01"></label>
+        </div>
+
+        <button type="submit">Розрахувати</button>
+    </form>
+
+    <div id="results"></div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
