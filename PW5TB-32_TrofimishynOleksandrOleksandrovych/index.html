@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Надійність енергопостачання</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <h1>Калькулятор надійності енергопостачання</h1>
+
+    <label for="taskSelector">Оберіть завдання:</label>
+    <select id="taskSelector" class="selector">
+        <option value="1">Завдання 1</option>
+        <option value="2">Завдання 2</option>
+    </select>
+
+    <form id="task1" class="task-section">
+        <label>ПЛ-110 кВ, км: <input type="number" name="l" step="0.01"></label>
+        <label>V-110 кВ, од: <input type="number" name="v110" step="1"></label>
+        <label>Т-110 кВ, од: <input type="number" name="t110" step="1"></label>
+        <label>V-10 кВ (малооливний), од: <input type="number" name="v10" step="1"></label>
+        <label>Збірні шини 10кВ на 1 приєднання, од: <input type="number" name="bus" step="1"></label>
+    </form>
+
+    <form id="task2" class="task-section" style="display:none">
+        <label>Зпер.а, грн/кВт·год: <input type="number" name="za" step="0.01"></label>
+        <label>Зпер.п, грн/кВт·год: <input type="number" name="zp" step="0.01"></label>
+        <label>ω (частота аварій/рік): <input type="number" name="omega" step="0.01"></label>
+        <label>t<sub>в</sub>, год: <input type="number" name="tv" step="0.01"></label>
+        <label>k<sub>п</sub>: <input type="number" name="kp" step="0.01"></label>
+        <label>P<sub>м</sub>, кВт: <input type="number" name="pm" step="0.01"></label>
+        <label>T<sub>м</sub>, год: <input type="number" name="tm" step="0.01"></label>
+    </form>
+
+    <button id="calculate">Розрахувати</button>
+    <div id="results"></div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
