@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Калькулятор КЗ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <h1>Калькулятор короткого замикання</h1>
+    <label for="taskSelector">Оберіть завдання:</label>
+    <select id="taskSelector" class="selector">
+        <option value="1">Завдання 1</option>
+        <option value="2">Завдання 2</option>
+        <option value="3">Завдання 3</option>
+    </select>
+
+    <form id="task1" class="task-section">
+        <label>Напруга, кВ: <input name="voltage1" type="number" step="0.01"></label>
+        <label>Струм КЗ, кА: <input name="current1" type="number" step="0.01"></label>
+        <label>Фіктивний час вимикання струму КЗ, с: <input name="time" type="number" step="0.01"></label>
+        <label>Потужність ТП, кВА: <input name="s_tp" type="number" step="0.01"></label>
+        <label>Розрахункове навантаження, кВА: <input name="s_load" type="number" step="0.01"></label>
+        <label>T<sub>M</sub>, год: <input name="tm" type="number" step="0.01"></label>
+    </form>
+
+    <form id="task2" class="task-section" style="display:none">
+        <label>Потужність КЗ, МВ*А: <input name="Skz" type="number" step="0.01"></label>
+    </form>
+
+    <form id="task3" class="task-section" style="display:none">
+        <label>Максимальна напруга КЗ: <input name="Umax" type="number" step="0.01"></label>
+        <label>Номінальна напруга вольтажу: <input name="Unom" type="number" step="0.01"></label>
+        <label>Номінальна потужність трансформатора: <input name="Snom" type="number" step="0.01"></label>
+        <label>Активний опір статора: <input name="R1" type="number" step="0.01"></label>
+        <label>Реактивний опір статора: <input name="X1" type="number" step="0.01"></label>
+        <label>Мінімальний активний опір статора: <input name="R2" type="number" step="0.01"></label>
+        <label>Мінімальний реактивний опір статора: <input name="X2" type="number" step="0.01"></label>
+    </form>
+
+    <button id="calculate">Розрахувати</button>
+    <div id="results"></div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
+
