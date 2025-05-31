@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Практична 6 — Розрахунок навантажень</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Розрахунок електричних навантажень</h1>
+
+        <form id="loadForm">
+            <table id="deviceTable">
+                <thead>
+                <tr>
+                    <th>Найменування ЕП</th>
+                    <th>ηн</th>
+                    <th>cos φ</th>
+                    <th>Uн (кВ)</th>
+                    <th>Кількість</th>
+                    <th>Pн (кВт)</th>
+                    <th>КВ</th>
+                    <th>tgφ</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Шліфувальний верстат</td>
+                        <td><input type="number" value="0.92" step="0.01"></td>
+                        <td><input type="number" value="0.9" step="0.01"></td>
+                        <td><input type="number" value="0.38" step="0.01"></td>
+                        <td><input type="number" value="4"></td>
+                        <td><input type="number" value="20"></td>
+                        <td><input type="number" value="0.15" step="0.01"></td>
+                        <td><input type="number" value="1.33" step="0.01"></td>
+                    </tr>
+                    <tr>
+                        <td>Свердлильний верстат</td>
+                        <td><input type="number" value="0.92" step="0.01"></td>
+                        <td><input type="number" value="0.9" step="0.01"></td>
+                        <td><input type="number" value="0.38" step="0.01"></td>
+                        <td><input type="number" value="2"></td>
+                        <td><input type="number" value="14"></td>
+                        <td><input type="number" value="0.12" step="0.01"></td>
+                        <td><input type="number" value="1" step="0.01"></td>
+                    </tr>
+                    <tr>
+                        <td>Фугувальний верстат</td>
+                        <td><input type="number" value="0.92" step="0.01"></td>
+                        <td><input type="number" value="0.9" step="0.01"></td>
+                        <td><input type="number" value="0.38" step="0.01"></td>
+                        <td><input type="number" value="4"></td>
+                        <td><input type="number" value="42"></td>
+                        <td><input type="number" value="0.15" step="0.01"></td>
+                        <td><input type="number" value="1.33" step="0.01"></td>
+                    </tr>
+                    <tr>
+                        <td>Циркулярна пила</td>
+                        <td><input type="number" value="0.92" step="0.01"></td>
+                        <td><input type="number" value="0.9" step="0.01"></td>
+                        <td><input type="number" value="0.38" step="0.01"></td>
+                        <td><input type="number" value="1"></td>
+                        <td><input type="number" value="36"></td>
+                        <td><input type="number" value="0.3" step="0.01"></td>
+                        <td><input type="number" value="1.52" step="0.01"></td>
+                    </tr>
+                    <tr>
+                        <td>Прес</td>
+                        <td><input type="number" value="0.92" step="0.01"></td>
+                        <td><input type="number" value="0.9" step="0.01"></td>
+                        <td><input type="number" value="0.38" step="0.01"></td>
+                        <td><input type="number" value="1"></td>
+                        <td><input type="number" value="20"></td>
+                        <td><input type="number" value="0.5" step="0.01"></td>
+                        <td><input type="number" value="0.75" step="0.01"></td>
+                    </tr>
+                    <tr>
+                        <td>Полірувальний верстат</td>
+                        <td><input type="number" value="0.92" step="0.01"></td>
+                        <td><input type="number" value="0.9" step="0.01"></td>
+                        <td><input type="number" value="0.38" step="0.01"></td>
+                        <td><input type="number" value="1"></td>
+                        <td><input type="number" value="40"></td>
+                        <td><input type="number" value="0.2" step="0.01"></td>
+                        <td><input type="number" value="1" step="0.01"></td>
+                    </tr>
+                    <tr>
+                        <td>Фрезерний верстат</td>
+                        <td><input type="number" value="0.92" step="0.01"></td>
+                        <td><input type="number" value="0.9" step="0.01"></td>
+                        <td><input type="number" value="0.38" step="0.01"></td>
+                        <td><input type="number" value="2"></td>
+                        <td><input type="number" value="32"></td>
+                        <td><input type="number" value="0.2" step="0.01"></td>
+                        <td><input type="number" value="1" step="0.01"></td>
+                    </tr>
+                    <tr>
+                        <td>Вентилятор</td>
+                        <td><input type="number" value="0.92" step="0.01"></td>
+                        <td><input type="number" value="0.9" step="0.01"></td>
+                        <td><input type="number" value="0.38" step="0.01"></td>
+                        <td><input type="number" value="1"></td>
+                        <td><input type="number" value="20"></td>
+                        <td><input type="number" value="0.65" step="0.01"></td>
+                        <td><input type="number" value="0.75" step="0.01"></td>
+                    </tr>
+                    <tr>
+                        <td>Зварювальний трансформатор</td>
+                        <td><input type="number" value="0.92" step="0.01"></td>
+                        <td><input type="number" value="0.9" step="0.01"></td>
+                        <td><input type="number" value="0.38"></td>
+                        <td><input type="number" value="2"></td>
+                        <td><input type="number" value="100"></td>
+                        <td><input type="number" value="0.2" step="0.01"></td>
+                        <td><input type="number" value="3" step="0.01"></td>
+                    </tr>
+                    <tr>
+                        <td>Сушильна шафа</td>
+                        <td><input type="number" value="0.92" step="0.01"></td>
+                        <td><input type="number" value="0.9" step="0.01"></td>
+                        <td><input type="number" value="0.38"></td>
+                        <td><input type="number" value="2"></td>
+                        <td><input type="number" value="120"></td>
+                        <td><input type="number" value="0.8" step="0.01"></td>
+                        <td><input type="number" value="0" step="0.01"></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Всього, навантаження цеху:</h3>
+            <label>n⋅Рн, кВт: <input id="totalPower" type="number" value="2330" step="1" required></label>
+            <label>n⋅Рн⋅Кв, кВт: <input id="totalUsedPower" type="number" value="752" step="1" required></label>
+            <label>n⋅Рн⋅КВ⋅tgφ, квар: <input id="totalReactive" type="number" value="657" step="1" required></label>
+            <label>n⋅Рн²: <input id="totalPowerSquare" type="number" value="96388" step="1" required></label>
+
+            <button type="submit">Розрахувати</button>
+        </form>
+
+        <div id="results"></div>
+    </div>
+<script src="script.js"></script>
+</body>
+</html>
