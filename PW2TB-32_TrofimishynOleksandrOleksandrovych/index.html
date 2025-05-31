@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Калькулятор викидів твердих частинок</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <h1>Калькулятор викидів</h1>
+    <form id="emissionForm">
+        <label>Донецьке газове вугілля марки ГР, т: <input type="number" name="coalAmount" step="0.01"></label>
+        <label>Високосірчистий мазут марки 40, т: <input type="number" name="oilAmount" step="0.01"></label>
+        <label>Природний газ із газопроводу Уренгой-Ужгород, м<sup>3</sup>: <input type="number" name="gasAmount" step="0.01"></label>
+        <button type="submit">Розрахувати</button>
+    </form>
+
+    <div id="results"></div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
